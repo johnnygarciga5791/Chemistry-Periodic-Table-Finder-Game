@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chemistry Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        input,
+        button {
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .element-box {
+            border: 1px solid #333;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .solid {
+            background-color: #ffe0b2;
+        }
+
+        .liquid {
+            background-color: #d1c4e9;
+        }
+
+        .gas {
+            background-color: #e0f7fa;
+        }
+
+        .element-radioactive {
+            border: 2px solid red;
+        }
+
+        .selected {
+            background-color: #3a3a3a;
+        }
+
+        .quiz-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Chemistry Project</h1>
+
+    <!-- Search Section -->
+    <h2>Search Element</h2>
+    <input id="symbolInput" placeholder="Enter symbol, name, or atomic number">
+    <button id="searchBtn" onclick="searchElement()">Search</button>
+    <div id="searchOutput"></div>
+
+    <!-- Quiz Buttons Side by Side -->
+    <h2>Take a Quiz</h2>
+    <div class="quiz-buttons">
+        <button id="startQuizBtn" onclick="startQuiz()">Start Type Quiz</button>
+        <button id="startMCBtn" onclick="startMultipleChoiceQuiz()">Start Multiple Choice Quiz</button>
+    </div>
+
+    <!-- Input Quiz Container -->
+    <div id="quizContainer" style="display:none;">
+        <p id="quizQuestion"></p>
+        <input id="quizAnswer" placeholder="Your answer">
+        <button id="submitBtn" onclick="submitAnswer()">Submit Answer</button>
+        <button id="nextBtn" style="display:none;" onclick="nextQuestion()">Next Question</button>
+        <p id="quizFeedback"></p>
+    </div>
+
+
+    <!-- Multiple Choice Quiz Container -->
+    <div id="mcQuizContainer" style="display:none;">
+        <p id="mcQuizQuestion"></p>
+        <div id="mcOptions"></div>
+        <p id="mcQuizFeedback"></p>
+        <button id="mcSubmitBtn" onclick="submitMCAnswer()" style="display:none;">Submit Answer</button>
+        <button id="nextMCBtn" onclick="nextMCQuestion()" style="display:none;">Next Question</button>
+    </div>
+
+    <!-- All Elements Section -->
+    <h2>All Elements</h2>
+    <button id="showAllBtn" onclick="toggleAllElements()">Show All</button>
+    <div id="allElementsOutput"></div>
+
+    <!-- Footer -->
+    <footer style="
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 2em;
+        font-weight: bold;
+        background-color: #f0f0f0;
+        padding: 10px 0;
+        border-top: 1px solid #ccc;
+    ">
+        Made by Johnny Garciga
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
