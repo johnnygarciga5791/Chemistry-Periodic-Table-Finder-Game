@@ -1,5 +1,3 @@
-# Chemistry-Periodic-Table-Finder-Game
-
 # Chemistry Periodic Table Finder & Quiz
 
 An interactive web application that allows users to search for chemical elements, explore their properties, and test their knowledge through quizzes.
